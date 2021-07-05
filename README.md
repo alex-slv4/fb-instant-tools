@@ -19,7 +19,7 @@ $ npm install -g fb-instant-tools
 $ fb-instant COMMAND
 running command...
 $ fb-instant (-v|--version|version)
-fb-instant-tools/0.0.1 darwin-arm64 node-v16.4.0
+fb-instant-tools/0.0.2 darwin-arm64 node-v16.4.0
 $ fb-instant --help [COMMAND]
 USAGE
   $ fb-instant COMMAND
@@ -65,7 +65,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/token.ts](https://github.com/alex-slv4/fb-instant-tools/blob/v0.0.1/src/commands/token.ts)_
+_See code: [src/commands/token.ts](https://github.com/alex-slv4/fb-instant-tools/blob/v0.0.2/src/commands/token.ts)_
 
 ## `fb-instant upload APP_ID ACCESS_TOKEN`
 
@@ -85,5 +85,5 @@ OPTIONS
   -h, --help             show CLI help
 ```
 
-_See code: [src/commands/upload.ts](https://github.com/alex-slv4/fb-instant-tools/blob/v0.0.1/src/commands/upload.ts)_
+_See code: [src/commands/upload.ts](https://github.com/alex-slv4/fb-instant-tools/blob/v0.0.2/src/commands/upload.ts)_
 <!-- commandsstop -->

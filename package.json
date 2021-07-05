@@ -28,6 +28,7 @@
     "globby": "^10",
     "mocha": "^5",
     "nyc": "^14",
+    "standard-version": "^9.3.0",
     "ts-node": "^8",
     "typescript": "^3.3"
   },
@@ -55,6 +56,7 @@
   },
   "repository": "alex-slv4/fb-instant-tools",
   "scripts": {
+    "release": "standard-version",
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",

@@ -9,6 +9,7 @@
   },
   "bugs": "https://github.com/alex-slv4/fb-instant-tools/issues",
   "dependencies": {
+    "axios": "^0.21.1",
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
@@ -20,7 +21,6 @@
     "@types/chai": "^4",
     "@types/mocha": "^5",
     "@types/node": "^10",
-    "axios": "^0.21.1",
     "chai": "^4",
     "eslint": "^5.13",
     "eslint-config-oclif": "^3.1",

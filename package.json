@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "author": "Alexander @alex-slv4",
   "bin": {
-    "fb-instant": "./bin/run"
+    "fb-instant": "./bin/run",
+    "fb-instant-game": "./bin/run"
   },
   "bugs": "https://github.com/alex-slv4/fb-instant-tools/issues",
   "dependencies": {

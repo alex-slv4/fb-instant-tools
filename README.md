@@ -28,28 +28,9 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`fb-instant hello [FILE]`](#fb-instant-hello-file)
 * [`fb-instant help [COMMAND]`](#fb-instant-help-command)
-
-## `fb-instant hello [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ fb-instant hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ fb-instant hello
-  hello world from ./src/hello.ts!
-```
-
-_See code: [src/commands/hello.ts](https://github.com/alex-slv4/fb-instant-tools/blob/v0.0.0/src/commands/hello.ts)_
+* [`fb-instant token [ID] [SECRET]`](#fb-instant-token-id-secret)
+* [`fb-instant upload APP_ID ACCESS_TOKEN`](#fb-instant-upload-app_id-access_token)
 
 ## `fb-instant help [COMMAND]`
 
@@ -67,4 +48,42 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
+
+## `fb-instant token [ID] [SECRET]`
+
+Generates facebook upload token
+
+```
+USAGE
+  $ fb-instant token [ID] [SECRET]
+
+ARGUMENTS
+  ID      App id
+  SECRET  App secret
+
+OPTIONS
+  -h, --help  show CLI help
+```
+
+_See code: [src/commands/token.ts](https://github.com/alex-slv4/fb-instant-tools/blob/v0.0.0/src/commands/token.ts)_
+
+## `fb-instant upload APP_ID ACCESS_TOKEN`
+
+Uploads asset to the facebook hosting
+
+```
+USAGE
+  $ fb-instant upload APP_ID ACCESS_TOKEN
+
+ARGUMENTS
+  APP_ID        App id
+  ACCESS_TOKEN  App access token
+
+OPTIONS
+  -C, --comment=comment  Comment to be added
+  -f, --file=file        Path to zip file
+  -h, --help             show CLI help
+```
+
+_See code: [src/commands/upload.ts](https://github.com/alex-slv4/fb-instant-tools/blob/v0.0.0/src/commands/upload.ts)_
 <!-- commandsstop -->

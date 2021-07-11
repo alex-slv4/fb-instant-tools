@@ -12,7 +12,6 @@
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
-    "axios": "^0.21.1",
     "tslib": "^1"
   },
   "devDependencies": {
@@ -56,6 +55,7 @@
   },
   "repository": "alex-slv4/fb-instant-tools",
   "scripts": {
+    "lint": "eslint . --ext .ts --config .eslintrc --fix",
     "release": "standard-version",
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",

@@ -14,40 +14,23 @@ Tool for uploading Facebook Instant Game bundle
 <!-- tocstop -->
 # Usage
 <!-- usage -->
+Using npx:
 ```sh-session
-$ npm install -g fb-instant-tools
-$ fb-instant COMMAND
-running command...
-$ fb-instant (-v|--version|version)
-fb-instant-tools/0.0.2 darwin-arm64 node-v16.4.0
-$ fb-instant --help [COMMAND]
-USAGE
-  $ fb-instant COMMAND
-...
+$ npx fb-instant-tools upload APP_ID 'ACCESS_TOKEN'
 ```
+Or as global dependency:
+```sh-session
+$ npm install --global fb-instant-tools
+$ fb-instant upload APP_ID 'ACCESS_TOKEN' -f path/to/game-bundle.zip -C "Some notes about the bundle"
+```
+Or as internal dependency within your `package.json` script.
+
+You can also use `fb-instant token APP_ID APP_SECRET` to generate the access token.
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`fb-instant help [COMMAND]`](#fb-instant-help-command)
 * [`fb-instant token ID SECRET`](#fb-instant-token-id-secret)
 * [`fb-instant upload APP_ID ACCESS_TOKEN`](#fb-instant-upload-app_id-access_token)
-
-## `fb-instant help [COMMAND]`
-
-display help for fb-instant
-
-```
-USAGE
-  $ fb-instant help [COMMAND]
-
-ARGUMENTS
-  COMMAND  command to show help for
-
-OPTIONS
-  --all  see all commands in CLI
-```
-
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
 
 ## `fb-instant token ID SECRET`
 

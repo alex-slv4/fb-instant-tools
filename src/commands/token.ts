@@ -28,11 +28,18 @@ export default class Token extends Command {
     if (secretIsUndefined) {
       return this.error('App secret is undefined')
     }
-
-    const result = await this.facebookGraph(
-      `/oauth/access_token?client_id=${id}&client_secret=${secret}&grant_type=client_credentials`
-    )
-    this.log(result)
+    try {
+      const result = await this.facebookGraph(
+        `/oauth/access_token?client_id=${id}&client_secret=${secret}&grant_type=client_credentials`
+      )
+      if (result.accessToken) {
+        this.log(result.accessToken)
+      } else {
+        this.error(JSON.stringify(result))
+      }
+    } catch (error) {
+      this.error(error)
+    }
   }
 
   private async facebookGraph(path: string): Promise<any> {

@@ -1,5 +1,6 @@
 import {Command, flags} from '@oclif/command'
 import * as child_process from 'child_process'
+import * as fs from 'fs'
 
 export default class Upload extends Command {
   static description = 'Uploads asset to the facebook hosting';
@@ -19,16 +20,16 @@ export default class Upload extends Command {
     const {args, flags} = this.parse(Upload)
 
     const {app_id, access_token} = args
-    if (!app_id || !access_token) {
-      this.warn('id and token required')
-      this._help()
-    }
     let {comment, file} = flags
-    file = file || 'bundle.zip'
+    file = file || './bundle.zip'
     comment = comment || 'No comment'
 
+    if (!fs.existsSync(file)) {
+      return this.error(`${file} not found`)
+    }
+
     const child = child_process.exec(
-      `curl --progress-bar -X POST -F "asset=@./${file}" -F "type=BUNDLE" -F "comment=${comment}" -F "access_token=${access_token}" https://graph-video.facebook.com/${app_id}/assets | tee /dev/null`
+      `curl --progress-bar -X POST -F "asset=@${file}" -F "type=BUNDLE" -F "comment=${comment}" -F "access_token=${access_token}" https://graph-video.facebook.com/${app_id}/assets | tee /dev/null`
     )
     child.stdout.pipe(process.stdout)
     child.stderr.pipe(process.stderr)

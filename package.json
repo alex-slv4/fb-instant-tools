@@ -1,7 +1,7 @@
 {
   "name": "fb-instant-tools",
   "description": "Tool for uploading Facebook Instant Game bundle",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "Alexander @alex-slv4",
   "bin": {
     "fb-instant": "./bin/run",

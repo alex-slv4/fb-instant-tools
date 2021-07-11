@@ -40,7 +40,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/alex-slv4/fb-instant-tools",
+  "homepage": "https://github.com/slavshik/fb-instant-tools",
   "keywords": [
     "oclif"
   ],
@@ -53,13 +53,13 @@
       "@oclif/plugin-help"
     ]
   },
-  "repository": "alex-slv4/fb-instant-tools",
+  "repository": "slavshik/fb-instant-tools",
   "scripts": {
     "lint": "eslint . --ext .ts --config .eslintrc --fix",
     "release": "standard-version",
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
-    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest",
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif-dev readme && git add README.md"
   },

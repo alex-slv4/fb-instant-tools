@@ -1,4 +1,4 @@
-import {expect, test} from '@oclif/test'
+import {test} from '@oclif/test'
 
 describe('token', () => {
   test
@@ -13,11 +13,8 @@ describe('token', () => {
     'upload',
     '1340675366328179',
     '1340675366328179|J1ir5Gp1q5xSEpuXHBvk_N3O2SA',
-  ])
+  ]).exit(2)
   .it(
-    'runs fb-upload 123 1340675366328179|J1ir5Gp1q5xSEpuXHBvk_N3O2SA',
-    ctx => {
-      expect(ctx.stdout).not.empty
-    }
+    'runs fb-upload and fails unable to find file'
   )
 })

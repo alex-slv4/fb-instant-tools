@@ -2,12 +2,12 @@
   "name": "fb-instant-tools",
   "description": "Tool for uploading Facebook Instant Game bundle",
   "version": "0.0.10",
-  "author": "Alexander @alex-slv4",
+  "author": "Alexander Slavschik",
   "bin": {
     "fb-instant": "./bin/run",
     "fb-instant-game": "./bin/run"
   },
-  "bugs": "https://github.com/alex-slv4/fb-instant-tools/issues",
+  "bugs": "https://github.com/slavshik/fb-instant-tools/issues",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",

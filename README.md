@@ -14,14 +14,20 @@ Tool for uploading Facebook Instant Game bundle
 <!-- tocstop -->
 # Usage
 <!-- usage -->
+`fb-instant-tools` - package name and `fb-instant` is the binary.
 Using npx:
-```sh-session
-$ npx fb-instant-tools upload APP_ID 'ACCESS_TOKEN'
+```bash
+npx fb-instant-tools token APP_ID 'APP_SECRET' # retrieve a token
+npx fb-instant-tools upload APP_ID 'ACCESS_TOKEN' # upload bundle ./Archive.zip
 ```
-Or as global dependency:
-```sh-session
-$ npm install --global fb-instant-tools
-$ fb-instant upload APP_ID 'ACCESS_TOKEN' -f path/to/game-bundle.zip -C "Some notes about the bundle"
+Or install as global dependency:
+```
+npm install --global fb-instant-tools
+```
+And then use `fb-instant` binary:
+```bash
+fb-instant token APP_ID 'APP_SECRET' # retrieve a token
+fb-instant upload APP_ID 'ACCESS_TOKEN' -f path/to/game-bundle.zip -C "Some notes about the bundle"
 ```
 Or as internal dependency within your `package.json` script.
 

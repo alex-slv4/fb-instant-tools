@@ -9,7 +9,7 @@
   },
   "bugs": "https://github.com/slavshik/fb-instant-tools/issues",
   "dependencies": {
-    "@oclif/command": "^1",
+    "@oclif/command": "^1.8.21",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
     "tslib": "^1"
